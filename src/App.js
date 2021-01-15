@@ -1,14 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import Formulario from './components/Formulario'
 
 function App() {
+
+  //states
+  const [busqueda, guardarBusqueda] = useState("");
+
   return (
     <div className="container">
       <div className="jumbotron">
         <p className="lead text-center">Buscador de imágenes</p>
         <Formulario 
-        
+          guardarBusqueda={guardarBusqueda}
         />
       </div>
     </div>
